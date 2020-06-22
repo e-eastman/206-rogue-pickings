@@ -16,7 +16,7 @@ body {
 	display: flex;
     justify-content: center;
 	align-items: center;
-	flex-flow: column wrap;
+	flex-flow: row wrap;
 }
 
 h1,
@@ -52,7 +52,7 @@ header {
 	display: flex;
     justify-content: center;
 	align-items: center;
-	flex-flow: column wrap;
+	flex-flow: row wrap;
 	text-align: center;
 }
 
@@ -67,17 +67,13 @@ header h1 {
 }
 
 header nav ul li {
-	width: 70%;
 	text-transform: uppercase;
 	font-weight: 700;
 	font-size: .875em;
 	list-style-type: none;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-wrap: wrap;
 	padding: 10px 0;
 }
+
 header nav ul li a{
 	text-decoration: none;
 	color:#77a466;
@@ -94,7 +90,7 @@ header nav ul li a{
 .bottom-section {
 	width: 100%;
 	display: flex;
-    justify-content: left;
+    justify-content: center;
 	align-items: center;
 	flex-flow: row wrap;
 }
@@ -126,10 +122,6 @@ header nav ul li a{
 	border-top: 1px solid #eee;
 }
 
-.section-two {
-	border-bottom: 1px solid #eee;
-}
-
 .menu li {
 	width: 100%;
 	color:#77a466;
@@ -155,6 +147,7 @@ header nav ul li a{
 
 /*The widths are in a percentage!*/
 footer {
+	width: 90%;
 	border-top: 3px solid #eee;
 	display: flex;
     justify-content: center;
@@ -167,4 +160,72 @@ footer span {
 	text-transform: lowercase;
 	color: #77a466;
 	font-size: 14px;
+}
+
+@media all and (min-width: 768px) {
+	.bottom-section {
+		justify-content: space-between;
+		align-items: left;
+		text-align: left;
+		flex-flow: row wrap;
+	}
+	
+	.section-two {
+		border-left: 1px solid #eee;
+		border-right: 1px solid #eee;
+	}
+}
+
+@media all and (min-width: 1200px) {
+	
+	header h1 {
+		width: 30%;
+		border-bottom: none;
+		text-align: left;
+	}
+
+	header {
+		justify-content: space-between;
+		
+	}
+
+	nav {
+		text-align: right;
+		width: 50%;
+	}
+	
+	
+	header nav ul li {
+		padding: 0 10px;
+		display: inline;
+	}
+	
+	header nav ul {
+		display: flex;
+		justify-content: space-between;
+	  }
+
+	.section-one,
+    .section-two,
+    .section-three {
+		width: 30%;
+		
+}
+
+.section-two {
+	border-left: 1px solid #eee;
+	border-right: 1px solid #eee;
+	padding-right: 20px;
+}
+
+.bottom-section {
+	align-items: flex-start;
+	justify-content: left;
+}
+
+.section-two,
+.section-three {
+	padding-left: 20px;
+}
+
 }
